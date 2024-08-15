@@ -15,7 +15,7 @@ const Navigation = () => {
       <div className="container mx-auto flex justify-between items-center px-4 sm:px-6 lg:px-8">
         <div className="flex items-center space-x-4">
           <img className="w-10 h-10 rounded-full" src={logo} alt="swift-logo" />
-          <h1 className="text-xl md:text-xl-custom font-bold text-[#7a1212]">Swift Delivery</h1>
+          <h1 className="text-xl md:text-xl-custom font-bold text-[#7a1212]">De-Swift</h1>
         </div>
         <div className="hidden md:flex space-x-8 text-lg text-[#7a1212]">
           <Link
@@ -71,7 +71,7 @@ const Navigation = () => {
           <li>
             <Link
               to="/"
-              className={`block hover:text-[#7a1212] transition-colors duration-300 ${
+              className={`block text-[#7a1212] hover:text-[#7a1212] transition-colors duration-300 ${
                 location.pathname === "/" || location.pathname === "/home" ? "underline font-bold" : ""
               }`}
             >
@@ -81,7 +81,7 @@ const Navigation = () => {
           <li>
             <Link
               to="/service"
-              className={`block hover:text-[#7a1212] transition-colors duration-300 ${
+              className={`block text-[#7a1212] hover:text-[#7a1212] transition-colors duration-300 ${
                 location.pathname === "/service" ? "underline font-bold" : ""
               }`}
             >
@@ -91,7 +91,7 @@ const Navigation = () => {
           <li>
             <Link
               to="/about"
-              className={`block hover:text-[#7a1212] transition-colors duration-300 ${
+              className={`block text-[#7a1212] hover:text-[#7a1212] transition-colors duration-300 ${
                 location.pathname === "/about" ? "underline font-bold" : ""
               }`}
             >
@@ -101,7 +101,7 @@ const Navigation = () => {
           <li>
             <Link
               to="/contact"
-              className={`block hover:text-[#7a1212] transition-colors duration-300 ${
+              className={`block text-[#7a1212]  hover:text-[#7a1212] transition-colors duration-300 ${
                 location.pathname === "/contact" ? "underline font-bold" : ""
               }`}
             >

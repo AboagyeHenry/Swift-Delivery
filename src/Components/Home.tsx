@@ -145,7 +145,7 @@ const Home: React.FC = () => {
       <div className="bg-white mt-32 px-5 md:py-20 md:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <div className="text-start lg:flex flex-row lg:justify-center md:text-center gap-10">
-            <h1 className="text-3xl md:text-5xl font-bold text-gray-900">
+            <h1 className="text-3xl md:text-5xl font-bold text-[#7a1212]">
               Swift Delivery: Your Trusted Courier Service
             </h1>
             <div>
@@ -182,11 +182,11 @@ const Home: React.FC = () => {
 
       {/* Swift Delivery Service Section */}
       <div className="bg-[#e8f0fe] py-12 md:py-20 px-4 md:px-8">
-        <div className="max-w-7xl md:mx-44 lg:mx-14 mx-auto text-center">
+        <div className="max-w-7xl md:mx-44 lg:mx-14 xl-custom:mx-56 mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-[#7a1212]">
             Swift Delivery Services
           </h2>
-          <p className="mt-4 md:mt-6 text-lg md:text-xl text-gray-600 max-w-xl-custom mx-auto">
+          <p className="mt-4 md:mt-6 text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
             Top-tier courier service excels in same-day and next-day delivery.
             Diverse fleet ensures reliability.
           </p>

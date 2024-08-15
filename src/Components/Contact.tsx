@@ -26,7 +26,7 @@ const Contact = () => {
           </p>
         </div>
 
-        <div className="flex flex-col lg:flex-row items-center justify-center gap-8 md:gap-10 my-16 md:my-20 px-4 md:px-0">
+        <div className="flex flex-col lg:flex-row items-center justify-center gap-8 md:gap-10 xl-custom: my-16 md:my-20 px-4 md:px-0">
           <div className="px-8 py-10 w-full lg:w-[30rem] md:w-[30rem] md:mx-20 rounded-xl bg-blue-50">
             <form>
               <div className="mb-4">
@@ -75,7 +75,7 @@ const Contact = () => {
       </div>
 
       {/* Location Section */}
-      <div className="px-4 md:px-0 my-16 md:my-36 md:mx-44 lg:mx-10 xl:mx-56">
+      <div className="px-4 md:px-0 my-16 md:my-36 md:mx-44 lg:mx-10 xl:mx-56 xl-custom:mx-96">
         <div className="flex flex-col lg:flex-row gap-8 md:gap-x-20">
           <div>
             <h1 className="text-3xl text-[#7a1212] sm:text-4xl md:text-5xl font-bold">
