@@ -97,8 +97,8 @@ const About = () => {
                 height="350"
                 frameBorder="0"
                 scrolling="no"
-                marginHeight="0"
-                marginwidth="0"
+                marginHeight={0}
+                marginWidth={0}
                 src="https://maps.google.com/maps?width=550&amp;height=350&amp;hl=en&amp;q=Accra+(De-Swift)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
               >
                 <a href="https://www.gps.ie/">gps devices</a>
