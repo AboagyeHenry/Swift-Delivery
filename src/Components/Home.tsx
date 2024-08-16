@@ -12,7 +12,7 @@ import truck from "../assets/Images/track-img.png";
 import service from "../assets/Images/service.png";
 import manRideCart from "../assets/Images/man-ride-cart.png";
 import push from "../assets/Images/push-cart.png";
-import manRide from "../assets/Images/man-ride.png";
+import maskedMan from "../assets/Images/masked-man.jpg";
 import packaBoxes from "../assets/Images/packgeBoxes.png";
 import offload from "../assets/Images/Offload-Goods.mp4";
 
@@ -35,7 +35,9 @@ const Home: React.FC = () => {
         <div className="relative container mx-auto h-full flex flex-col lg:flex lg:flex-row items-center justify-around px-4 md:px-12">
           {/* Text Section */}
           <div className="text-white mt-5 max-w-lg md:mx-40 lg:mx-10 mb-12 md:mb-0">
-            <div className="text-xs md:text-xl xl-custom:text-xl-custom font-semibold text-yellow-500">★★★★★</div>
+            <div className="text-xs md:text-xl xl-custom:text-xl-custom font-semibold text-yellow-500">
+              ★★★★★
+            </div>
             <p className="w-full md:w-72 text-sm md:text-base mb-3">
               Trusted choice for international and domestic courier needs.
             </p>
@@ -60,84 +62,103 @@ const Home: React.FC = () => {
 
           {/* Form Section */}
           <div className="bg-slate-400 bg-opacity-20 p-8 rounded-lg shadow-lg w-full md:mt-10 md:w-96 xl-custom:w-[30rem] max-w-7xl">
-  <h2 className="text-white text-xl md:text-xl-custom mb-4">
-    Swift Delivery Form Section
-  </h2>
-  <form>
-    <div className="mb-4">
-      <label htmlFor="name" className="block text-sm md:text-sm xl-custom:text-lg text-white mb-2">
-        Enter your name here
-      </label>
-      <input
-        id="name"
-        type="text"
-        name="name"
-        className="w-full md:w-80 text-base lg:w-80 lg:text-sm md:text-sm xl-custom:w-[26rem] xl-custom:text-lg p-3 border rounded-lg focus:outline-none focus:border-red-600"
-        placeholder="Your Name"
-        required
-        minLength={2}
-        maxLength={50}
-      />
-      <p className="text-red-500 text-xs hidden" id="name-error">Name must be between 2 and 50 characters long.</p>
-    </div>
-    <div className="mb-4">
-      <label htmlFor="email" className="block text-sm xl-custom:text-lg text-white mb-2">
-        Email Address*
-      </label>
-      <input
-        id="email"
-        type="email"
-        name="email"
-        className="w-full md:w-80 text-base lg:w-80 lg:text-sm md:text-sm xl-custom:w-[26rem] xl-custom:text-lg p-3 border rounded-lg focus:outline-none focus:border-red-600"
-        placeholder="Your Email"
-        required
-        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
-        aria-describedby="email-error"
-      />
-      <p className="text-red-500 text-xs hidden" id="email-error">Please enter a valid email address.</p>
-    </div>
-    <div className="mb-4">
-      <label htmlFor="phone" className="block text-sm xl-custom:text-lg text-white mb-2">
-        Phone number*
-      </label>
-      <input
-        id="phone"
-        type="tel"
-        name="phone"
-        className="w-full md:w-80 text-base lg:w-80 lg:text-sm md:text-sm xl-custom:w-[26rem] xl-custom:text-lg p-3 border rounded-lg focus:outline-none focus:border-red-600"
-        placeholder="Your Phone Number"
-        required
-        pattern="[0-9]{10,15}"
-        aria-describedby="phone-error"
-      />
-      <p className="text-red-500 text-xs hidden" id="phone-error">Phone number must be between 10 and 15 digits.</p>
-    </div>
-    <div className="mb-6">
-      <label htmlFor="message" className="block text-sm xl-custom:text-lg text-white mb-2">
-        Message*
-      </label>
-      <textarea
-        id="message"
-        name="message"
-        className="w-full md:w-80 h-20 p-3 border text-base lg:w-80 lg:text-sm xl-custom:w-[26rem] xl-custom:text-lg  md:text-lg rounded-lg focus:outline-none focus:border-red-600"
-        rows={4}
-        placeholder="Your Message"
-        required
-        minLength={10}
-        maxLength={500}
-        aria-describedby="message-error"
-      ></textarea>
-      <p className="text-red-500 text-xs hidden" id="message-error">Message must be between 10 and 500 characters long.</p>
-    </div>
-    <button
-      type="submit"
-      className="w-56 lg:py-3 md:w-56 md:mx-12 lg:mx-4 bg-transparent border-2 border-white text-white py-2 rounded-full hover:bg-red-600 transition-colors duration-300"
-    >
-      Submit Form Now
-    </button>
-  </form>
-</div>
-
+            <h2 className="text-white text-xl md:text-xl-custom mb-4">
+              Swift Delivery Form Section
+            </h2>
+            <form>
+              <div className="mb-4">
+                <label
+                  htmlFor="name"
+                  className="block text-sm md:text-sm xl-custom:text-lg text-white mb-2"
+                >
+                  Enter your name here
+                </label>
+                <input
+                  id="name"
+                  type="text"
+                  name="name"
+                  className="w-full md:w-80 text-base lg:w-80 lg:text-sm md:text-sm xl-custom:w-[26rem] xl-custom:text-lg p-3 border rounded-lg focus:outline-none focus:border-red-600"
+                  placeholder="Your Name"
+                  required
+                  minLength={2}
+                  maxLength={50}
+                />
+                <p className="text-red-500 text-xs hidden" id="name-error">
+                  Name must be between 2 and 50 characters long.
+                </p>
+              </div>
+              <div className="mb-4">
+                <label
+                  htmlFor="email"
+                  className="block text-sm xl-custom:text-lg text-white mb-2"
+                >
+                  Email Address*
+                </label>
+                <input
+                  id="email"
+                  type="email"
+                  name="email"
+                  className="w-full md:w-80 text-base lg:w-80 lg:text-sm md:text-sm xl-custom:w-[26rem] xl-custom:text-lg p-3 border rounded-lg focus:outline-none focus:border-red-600"
+                  placeholder="Your Email"
+                  required
+                  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                  aria-describedby="email-error"
+                />
+                <p className="text-red-500 text-xs hidden" id="email-error">
+                  Please enter a valid email address.
+                </p>
+              </div>
+              <div className="mb-4">
+                <label
+                  htmlFor="phone"
+                  className="block text-sm xl-custom:text-lg text-white mb-2"
+                >
+                  Phone number*
+                </label>
+                <input
+                  id="phone"
+                  type="tel"
+                  name="phone"
+                  className="w-full md:w-80 text-base lg:w-80 lg:text-sm md:text-sm xl-custom:w-[26rem] xl-custom:text-lg p-3 border rounded-lg focus:outline-none focus:border-red-600"
+                  placeholder="Your Phone Number"
+                  required
+                  pattern="[0-9]{10,15}"
+                  aria-describedby="phone-error"
+                />
+                <p className="text-red-500 text-xs hidden" id="phone-error">
+                  Phone number must be between 10 and 15 digits.
+                </p>
+              </div>
+              <div className="mb-6">
+                <label
+                  htmlFor="message"
+                  className="block text-sm xl-custom:text-lg text-white mb-2"
+                >
+                  Message*
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  className="w-full md:w-80 h-20 p-3 border text-base lg:w-80 lg:text-sm xl-custom:w-[26rem] xl-custom:text-lg  md:text-lg rounded-lg focus:outline-none focus:border-red-600"
+                  rows={4}
+                  placeholder="Your Message"
+                  required
+                  minLength={10}
+                  maxLength={500}
+                  aria-describedby="message-error"
+                ></textarea>
+                <p className="text-red-500 text-xs hidden" id="message-error">
+                  Message must be between 10 and 500 characters long.
+                </p>
+              </div>
+              <button
+                type="submit"
+                className="w-56 lg:py-3 md:w-56 md:mx-12 lg:mx-4 bg-transparent border-2 border-white text-white py-2 rounded-full hover:bg-red-600 transition-colors duration-300"
+              >
+                Submit Form Now
+              </button>
+            </form>
+          </div>
         </div>
       </div>
 
@@ -175,13 +196,17 @@ const Home: React.FC = () => {
             </div>
           </div>
           <div className="mt-16 mb-5 ">
-            <img className="rounded-xl-custom md:h-full mx-auto" src={image} alt="image" />
+            <img
+              className="rounded-xl-custom md:h-full mx-auto"
+              src={image}
+              alt="image"
+            />
           </div>
         </div>
       </div>
 
       {/* Swift Delivery Service Section */}
-      <div className="bg-[#e8f0fe] py-12 md:py-20 px-4 md:px-8">
+      <div className=" bg-[#e8f0fe] py-12 md:py-20 px-4 md:px-8">
         <div className="max-w-7xl md:mx-44 lg:mx-14 xl-custom:mx-56 mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-[#7a1212]">
             Swift Delivery Services
@@ -247,15 +272,18 @@ const Home: React.FC = () => {
 
       {/* Testimonials */}
       {/* Testimonials */}
-      <div className="bg-[#6e727a] py-10 md:py-20 px-4 md:px-8 text-white">
+      <div className="testimonials-bg-img py-10 md:py-20 px-4 md:px-8 text-white">
         <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-8">
+            Testimonials
+          </h2>
           <div className="flex flex-col md:flex-row gap-8 text-center">
             <div className="flex justify-center">
               <div className="flex flex-col items-center">
-                <div className="text-xl md:text-3xl text-[#7a1212] font-semibold mb-1">
+                <div className="text-xl md:text-3xl text-yellow-500 font-semibold mb-1">
                   ★★★★★
                 </div>
-                <p className="text-sm w-46 mt-2 mb-4 ">
+                <p className="text-sm w-46 mt-2 mb-4">
                   Reliable and efficient service, always on time with
                   deliveries. Highly recommend Swift Delivery for all your
                   courier needs.
@@ -263,7 +291,7 @@ const Home: React.FC = () => {
                 <img
                   className="w-16 h-16 rounded-full"
                   src={victorianBuildings}
-                  alt=""
+                  alt="Satisfied Customer"
                 />
                 <p>Satisfied Customer</p>
               </div>
@@ -271,10 +299,10 @@ const Home: React.FC = () => {
 
             <div className="flex justify-center">
               <div className="flex flex-col items-center">
-                <div className="text-xl md:text-3xl text-[#7a1212] font-semibold mb-1">
+                <div className="text-xl md:text-3xl text-yellow-500 font-semibold mb-1">
                   ★★★★★
                 </div>
-                <p className="text-sm w-46 mt-2 mb-4 ">
+                <p className="text-sm w-46 mt-2 mb-4">
                   Reliable and efficient service, always on time with
                   deliveries. Highly recommend Swift Delivery for all your
                   courier needs.
@@ -282,7 +310,7 @@ const Home: React.FC = () => {
                 <img
                   className="w-16 h-16 rounded-full"
                   src={pharmacyDelivery}
-                  alt=""
+                  alt="Satisfied Customer"
                 />
                 <p>Satisfied Customer</p>
               </div>
@@ -309,7 +337,7 @@ const Home: React.FC = () => {
             />
             <img
               className="rounded-lg w-full lg:w-72 xl:w-96 md:w-1/3"
-              src={manRide}
+              src={maskedMan}
               alt="manRide"
             />
             <img
@@ -321,7 +349,11 @@ const Home: React.FC = () => {
 
           {/* Second Row */}
           <div className="flex flex-col md:flex-row md:flex-wrap lg:flex lg:flex-row lg:flex-nowrap justify-center items-center gap-5">
-            <img className="rounded-lg w-full md:w-1/3 lg:w-72 xl:w-96" src={push} alt="push" />
+            <img
+              className="rounded-lg w-full md:w-1/3 lg:w-72 xl:w-96"
+              src={push}
+              alt="push"
+            />
             <img
               className="rounded-lg w-full md:w-1/3 lg:w-72 xl:w-96"
               src={manRideCart}

@@ -1,12 +1,22 @@
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
-.animate-fade-in {
-  animation: fadeIn 1s ease-in-out;
+body{
+  font-family: 'Poppins';
+}
+
+/* .testimonials-bg-img {
+  background-image: url('./assets/Images/background-image.jpg');
+  background-size: cover;
+  background-position: center;
+} */
+
+.testimonials-bg-img {
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0.7)
+    ),
+    url('./assets/Images/background-image.jpg') no-repeat center center/cover;
+  padding: 5rem 1rem;
 }

@@ -9,18 +9,18 @@ const Footer: React.FC = () => {
           <h1 className='text-xl-custom font-bold'>Reliable</h1>
           <p className='w-full lg:w-80 py-5'>Top-tier courier service excels in same-day and next-day delivery.</p>
           <div className="flex text-2xl gap-x-5">
-            <FaFacebook className='text-[#7a1212]' aria-label="Facebook" />
-            <FaYoutube className='text-[#7a1212]' aria-label="YouTube" />
-            <FaInstagram className='text-[#7a1212]' aria-label="Instagram" />
-            <FaTiktok className='text-[#7a1212]' aria-label="TikTok" />
-            <FaTwitter className='text-[#7a1212]' aria-label="Twitter" />
+            <FaFacebook className='text-yellow-500' aria-label="Facebook" />
+            <FaYoutube className='text-yellow-500' aria-label="YouTube" />
+            <FaInstagram className='text-yellow-500' aria-label="Instagram" />
+            <FaTiktok className='text-yellow-500' aria-label="TikTok" />
+            <FaTwitter className='text-yellow-500' aria-label="Twitter" />
           </div>
           <p className='mt-10 lg:mt-20'>© 2024. All rights reserved.</p>
         </div>
 
         <div>
           <h1 className='text-lg font-bold'>Efficient</h1>
-          <p className='w-full lg:w-80 py-5'>987swift456 swiftdelivery@example.com</p>
+          <p className='w-full lg:w-80 py-5'>Info@de-swift.com</p>
         </div>
 
         <div>
