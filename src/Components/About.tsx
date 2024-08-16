@@ -2,7 +2,6 @@ import Navigation from "./Navigation";
 import Footer from "./Footer";
 
 import helmet from "../assets/Images/helmet.png";
-import map from "../assets/Images/map.png";
 
 const About = () => {
   return (
