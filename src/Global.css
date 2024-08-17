@@ -1,16 +1,9 @@
-html {
-  scroll-behavior: smooth;
-}
+
 
 body{
   font-family: 'Poppins';
 }
 
-/* .testimonials-bg-img {
-  background-image: url('./assets/Images/background-image.jpg');
-  background-size: cover;
-  background-position: center;
-} */
 
 .testimonials-bg-img {
   background: linear-gradient(
@@ -19,4 +12,18 @@ body{
     ),
     url('./assets/Images/background-image.jpg') no-repeat center center/cover;
   padding: 5rem 1rem;
+}
+.animate-fade-in {
+  animation: fade-in 0.5s forwards;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

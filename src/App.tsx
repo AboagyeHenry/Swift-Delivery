@@ -1,4 +1,5 @@
 import { Routes, Route } from "react-router-dom";
+import useScrollToTop from "./Components/ScrollTop";
 import Navigation from "./Components/Navigation";
 import Home from "./Components/Home";
 import Service from "./Components/Service";
@@ -7,6 +8,7 @@ import Contact from "./Components/Contact"
 import Footer from "./Components/Footer";
 
 function App() {
+  useScrollToTop(); 
  
 
   return (
@@ -24,3 +26,6 @@ function App() {
 }
 
 export default App
+
+
+

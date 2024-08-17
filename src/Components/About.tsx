@@ -1,7 +1,7 @@
 import Navigation from "./Navigation";
 import Footer from "./Footer";
-
 import helmet from "../assets/Images/helmet.png";
+import FadeInSection from "./FadeInSection";
 
 const About = () => {
   return (
@@ -9,7 +9,7 @@ const About = () => {
       <Navigation />
 
       {/* Introduction Section */}
-      <div className="flex flex-col md:flex-col lg:flex-row lg:mx-10 xl-custom:mx-[12rem] items-center justify-center gap-10 md:gap-x-24 my-24 md:my-32 px-4 md:px-0">
+      <FadeInSection className="flex flex-col md:flex-col lg:flex-row lg:mx-10 xl-custom:mx-[12rem] items-center justify-center gap-10 md:gap-x-24 my-24 md:my-32 px-4 md:px-0 animate-fadeIn delay-0" fadeDelay={200}>
         <div className="text-center md:text-left">
           <h1 className="text-3xl text-[#7a1212] sm:text-4xl md:text-4xl lg:text-5xl font-bold mb-6 leading-snug">
             Swift Delivery - Reliable Courier Service
@@ -31,43 +31,43 @@ const About = () => {
             className="mx-auto rounded-2xl md:mx-0"
           />
         </div>
-      </div>
+      </FadeInSection>
 
       {/* Mission, Vision, and Extension Section */}
-      <div className="max-w-7xl mx-auto px-4 md:px-0 md:mx-12 lg:mx-48 my-16">
-  <h1 className="text-3xl text-[#7a1212] sm:text-4xl md:text-5xl font-bold mb-6 text-center">
-    Our Mission, Vision, and Extension
-  </h1>
-  <div className="flex flex-col lg:flex-row justify-center gap-10 md:gap-x-20">
-    
-    <div className="lg:w-1/2 xl:w-1/2">
-      <h2 className="text-lg sm:text-xl font-bold mb-4 text-center">Vision</h2>
-      <p className="text-sm md:text-base text-center">
-        To become the preferred courier service known for our swiftness,
-        reliability, and commitment to customer’s satisfaction, fostering
-        growth and convenience in every delivery.
-        <br />
-        <br />
-        To extend our service beyond the borders of Ghana by providing
-        quality delivery service to the doorsteps of our cherished
-        customers.
-      </p>
-    </div>
+      <FadeInSection className="max-w-7xl mx-auto px-4 md:px-0 md:mx-12 lg:mx-48 my-16 animate-fadeIn delay-200" fadeDelay={400}>
+        <h1 className="text-3xl text-[#7a1212] sm:text-4xl md:text-5xl font-bold mb-6 text-center">
+          Our Mission, Vision, and Extension
+        </h1>
+        <div className="flex flex-col lg:flex-row justify-center gap-10 md:gap-x-20">
+          
+          <div className="lg:w-1/2 xl:w-1/2 animate-fadeIn delay-400">
+            <h2 className="text-lg sm:text-xl font-bold mb-4 text-center">Vision</h2>
+            <p className="text-sm md:text-base text-center">
+              To become the preferred courier service known for our swiftness,
+              reliability, and commitment to customer’s satisfaction, fostering
+              growth and convenience in every delivery.
+              <br />
+              <br />
+              To extend our service beyond the borders of Ghana by providing
+              quality delivery service to the doorsteps of our cherished
+              customers.
+            </p>
+          </div>
 
-    <div className="lg:w-1/2 xl:w-1/2">
-      <h2 className="text-lg sm:text-xl font-bold mb-4 text-center">Mission</h2>
-      <p className="text-sm md:text-base text-center">
-        To provide efficient and dependable courier service, connecting
-        businesses and individuals with seamless and rapid delivery
-        experience.
-      </p>
-    </div>
+          <div className="lg:w-1/2 xl:w-1/2 animate-fadeIn delay-600">
+            <h2 className="text-lg sm:text-xl font-bold mb-4 text-center">Mission</h2>
+            <p className="text-sm md:text-base text-center">
+              To provide efficient and dependable courier service, connecting
+              businesses and individuals with seamless and rapid delivery
+              experience.
+            </p>
+          </div>
 
-  </div>
-</div>
+        </div>
+      </FadeInSection>
 
       {/* Location Section */}
-      <div className="px-4 md:px-0 my-16 md:my-36 md:mx-44 lg:mx-10 xl-custom:mx-40 flex justify-center">
+      <FadeInSection className="px-4 md:px-0 my-16 md:my-36 md:mx-44 lg:mx-10 xl-custom:mx-40 flex justify-center animate-fadeIn delay-800" fadeDelay={600}>
         <div className="flex flex-col lg:flex-row gap-8 md:gap-x-10  mx-auto">
           <div className="w-full">
             <h1 className="text-3xl text-[#7a1212] sm:text-4xl md:text-5xl lg:text-start font-bold text-center">
@@ -106,10 +106,10 @@ const About = () => {
             </div>
           </div>
         </div>
-      </div>
+      </FadeInSection>
 
       {/* Testimonials Section */}
-      <div className="py-16 md:py-20 px-4 md:px-0 md:mx-12 lg:mx-48">
+      <FadeInSection className="py-16 md:py-20 px-4 md:px-0 md:mx-12 lg:mx-48 animate-fadeIn delay-1000" fadeDelay={800}>
         <div className="text-center mb-12 md:mb-20">
           <h1 className="text-3xl text-[#7a1212] sm:text-4xl md:text-5xl font-bold">
             Top Courier
@@ -167,7 +167,7 @@ const About = () => {
             </div>
           </div>
         </div>
-      </div>
+      </FadeInSection>
 
       <Footer />
     </div>

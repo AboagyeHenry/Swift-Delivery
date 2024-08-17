@@ -1,5 +1,6 @@
 import Navigation from "./Navigation";
 import Footer from "./Footer";
+import FadeInSection from "./FadeInSection";
 
 import walk from "../assets/Images/walk.png";
 import truck from "../assets/Images/track-img.png";
@@ -15,16 +16,16 @@ const Contact = () => {
       <Navigation />
 
       {/* Contact Us Section */}
-      <div className="testimonials-bg-img">
+      <FadeInSection className="testimonials-bg-img" fadeDelay={200}>
         <div className="text-center mt-40 mb-16 px-4 md:px-0 text-black">
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white">
             Contact De-Swift
           </h1>
           <p className="w-full md:w-[30rem] mt-4 sm:mt-6 lg:mt-8 mx-auto text-sm md:text-base text-white">
-            {/* Swift Delivery offers top-tier courier service with diverse fleet for secure international and domestic deliveries. */}
           </p>
         </div>
-      </div>
+      </FadeInSection>
+      
       <div className="mt-20 md:mt-40 xl px-4 md:px-0">
         <div className="text-center">
           <h1 className="text-3xl text-[#7a1212] sm:text-4xl md:text-5xl font-bold mb-4 mx-auto">
@@ -36,7 +37,7 @@ const Contact = () => {
         </div>
 
         <div className="flex flex-col lg:flex-row items-center justify-center gap-8 md:gap-8 xl-custom: my-16 md:my-20 px-4 xl:mr-36 md:px-0">
-          <div className="px-8 py-10 w-full lg:w-[30rem] md:w-[30rem] md:mx-20 rounded-xl bg-blue-50">
+          <FadeInSection className="px-8 py-10 w-full lg:w-[30rem] md:w-[30rem] md:mx-20 rounded-xl bg-blue-50" fadeDelay={400}>
             <form>
               <div className="mb-4">
                 <label className="block text-lg text-black mb-2">
@@ -75,18 +76,20 @@ const Contact = () => {
                 Submit Form Now
               </button>
             </form>
-          </div>
+          </FadeInSection>
 
+          <FadeInSection fadeDelay={600}>
           <img
             src={walk}
             alt="walk"
             className="w-full md:w-[30rem] lg:w-auto rounded-xl"
           />
+          </FadeInSection>
         </div>
       </div>
 
       {/* Location Section */}
-      <div className="px-4 md:px-0 my-16 md:my-36 md:mx-44 lg:mx-10 xl-custom:mx-40 flex justify-center">
+      <FadeInSection className="px-4 md:px-0 my-16 md:my-36 md:mx-44 lg:mx-10 xl-custom:mx-40 flex justify-center" fadeDelay={800}>
         <div className="flex flex-col lg:flex-row gap-8 md:gap-x-10  mx-auto">
           <div className="w-full">
             <h1 className="text-3xl text-[#7a1212] sm:text-4xl md:text-5xl lg:text-start font-bold text-center">
@@ -125,7 +128,7 @@ const Contact = () => {
             </div>
           </div>
         </div>
-      </div>
+      </FadeInSection>
 
       {/* Swift Delivery Section */}
       <div className="container mx-auto my-10 px-4 md:px-0">
@@ -139,39 +142,55 @@ const Contact = () => {
 
         <div className="flex flex-col gap-y-5 items-center">
           <div className="flex flex-col lg:flex-row justify-center items-center gap-5">
-            <img
+            <FadeInSection fadeDelay={1000}>
+              <img
               className="rounded-lg w-full lg:w-72 xl:w-[22rem] md:w-96"
               src={truck}
               alt="truck"
             />
+            </FadeInSection>
+
+            <FadeInSection fadeDelay={1200}>
             <img
               className="rounded-lg w-full lg:w-72 xl:w-[22rem] md:w-96"
-              src={manRideCart}
-              alt="manRide"
+              src={maskedMan}
+              alt="maskedMan"
             />
+            </FadeInSection>
+
+            <FadeInSection fadeDelay={1400}>
             <img
               className="rounded-lg w-full lg:w-72 xl:w-[22rem] md:w-96"
               src={service}
               alt="service"
             />
+            </FadeInSection>
           </div>
 
           <div className="flex flex-col lg:flex-row justify-center items-center gap-5">
+          <FadeInSection fadeDelay={1600}>
             <img
-              className="rounded-lg w-full lg:w-72 xl:w-96 md:w-96"
+              className="rounded-lg w-full lg:w-72 xl:w-[22rem] md:w-96"
               src={push}
               alt="push"
             />
+            </FadeInSection>
+
+            <FadeInSection fadeDelay={1800}>
             <img
-              className="rounded-lg w-full lg:w-72 xl:w-96 md:w-96"
-              src={maskedMan}
+              className="rounded-lg w-full lg:w-72 xl:w-[22rem] md:w-96"
+              src={manRideCart}
               alt="manRideCart"
             />
+            </FadeInSection>
+
+            <FadeInSection fadeDelay={2000}>
             <img
-              className="rounded-lg w-full lg:w-72 xl:w-96 md:w-96"
+              className="rounded-lg w-full lg:w-72 xl:w-[22rem] md:w-96"
               src={packaBoxes}
-              alt="packageBoxes"
+              alt="packaBoxes"
             />
+            </FadeInSection>
           </div>
         </div>
       </div>

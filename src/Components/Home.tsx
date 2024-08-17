@@ -1,6 +1,7 @@
 import Navigation from "./Navigation";
 import Footer from "./Footer";
 
+
 //Imported Images
 import deliveryMan from "../assets/Images/delivery-man.png";
 import deliveryPackage from "../assets/Images/delivery-package.png";
@@ -15,6 +16,7 @@ import push from "../assets/Images/push-cart.png";
 import maskedMan from "../assets/Images/masked-man.jpg";
 import packaBoxes from "../assets/Images/packgeBoxes.png";
 import offload from "../assets/Images/Offload-Goods.mp4";
+import FadeInSection from "./FadeInSection";
 
 const Home: React.FC = () => {
   return (
@@ -22,7 +24,7 @@ const Home: React.FC = () => {
       <Navigation />
 
       {/* Hero Section */}
-      <div className="relative bg-cover mb-44 md:mb-56 pt-20 bg-center h-[150vh] xl-custom:h-[110vh]">
+      <div className="relative bg-cover mb-44 md:mb-56 pt-20 bg-center h-[150vh] xl-custom:h-[110vh]" >
         <video
           className="absolute top-0 left-0 w-full h-[170vh] md:h-[190vh] xl-custom:h-[110vh] object-cover"
           autoPlay
@@ -34,7 +36,8 @@ const Home: React.FC = () => {
         <div className="absolute inset-0 bg-black bg-opacity-50"></div>
         <div className="relative container mx-auto h-full flex flex-col lg:flex lg:flex-row items-center justify-around px-4 md:px-12">
           {/* Text Section */}
-          <div className="text-white mt-5 max-w-lg md:mx-40 lg:mx-10 mb-12 md:mb-0">
+          
+          <FadeInSection className="text-white mt-5 max-w-lg md:mx-40 lg:mx-10 mb-12 md:mb-0"fadeDelay={200}>
             <div className="text-xs md:text-xl xl-custom:text-xl-custom font-semibold text-yellow-500">
               ★★★★★
             </div>
@@ -58,10 +61,10 @@ const Home: React.FC = () => {
                 Get
               </button>
             </div>
-          </div>
+          </FadeInSection>
 
           {/* Form Section */}
-          <div className="bg-slate-400 bg-opacity-20 p-8 rounded-lg shadow-lg w-full md:mt-10 md:w-96 xl-custom:w-[30rem] max-w-7xl">
+          <FadeInSection className="bg-slate-400 bg-opacity-20 p-8 rounded-lg shadow-lg w-full md:mt-10 md:w-96 xl-custom:w-[30rem] max-w-7xl" fadeDelay={400}>
             <h2 className="text-white text-xl md:text-xl-custom mb-4">
               Swift Delivery Form Section
             </h2>
@@ -158,12 +161,12 @@ const Home: React.FC = () => {
                 Submit Form Now
               </button>
             </form>
-          </div>
+          </FadeInSection>
         </div>
       </div>
 
       {/* Swift Delivery Your Trusted Service */}
-      <div className="bg-white mt-32 px-5 md:py-20 md:px-8">
+      <FadeInSection className="bg-white mt-32 px-5 md:py-20 md:px-8" fadeDelay={600}>
         <div className="max-w-7xl mx-auto text-center">
           <div className="text-start lg:flex flex-row lg:justify-center md:text-center gap-10">
             <h1 className="text-3xl md:text-5xl font-bold text-[#7a1212]">
@@ -203,10 +206,10 @@ const Home: React.FC = () => {
             />
           </div>
         </div>
-      </div>
+      </FadeInSection>
 
       {/* Swift Delivery Service Section */}
-      <div className=" bg-[#e8f0fe] py-12 md:py-20 px-4 md:px-8">
+      <FadeInSection className=" bg-[#e8f0fe] py-12 md:py-20 px-4 md:px-8" fadeDelay={800}>
         <div className="max-w-7xl md:mx-44 lg:mx-14 xl-custom:mx-56 mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-[#7a1212]">
             Swift Delivery Services
@@ -268,11 +271,11 @@ const Home: React.FC = () => {
             </div>
           </div>
         </div>
-      </div>
+      </FadeInSection>
 
       {/* Testimonials */}
       {/* Testimonials */}
-      <div className="testimonials-bg-img py-10 md:py-20 px-4 md:px-8 text-white">
+      <FadeInSection className="testimonials-bg-img py-10 md:py-20 px-4 md:px-8 text-white" fadeDelay={1000}>
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-8">
             Testimonials
@@ -317,10 +320,10 @@ const Home: React.FC = () => {
             </div>
           </div>
         </div>
-      </div>
+      </FadeInSection>
 
       {/* Swift Delivery */}
-      <div className="container mx-auto my-10 p-4">
+      <FadeInSection className="container mx-auto my-10 p-4" fadeDelay={1200}>
         <h1 className="text-3xl font-bold text-center mb-4">Swift Delivery</h1>
         <p className="text-center mb-8">
           Top-tier courier service excels in same-day and next-day delivery
@@ -366,7 +369,7 @@ const Home: React.FC = () => {
             />
           </div>
         </div>
-      </div>
+      </FadeInSection>
 
       {/* Footer */}
       <Footer />
@@ -375,3 +378,199 @@ const Home: React.FC = () => {
 };
 
 export default Home;
+
+
+
+
+// import React from "react";
+// import Navigation from "./Navigation";
+// import Footer from "./Footer";
+// import FadeInSection from "./FadeInSection";
+
+// // Imported Images
+// import deliveryMan from "../assets/Images/delivery-man.png";
+// import deliveryPackage from "../assets/Images/delivery-package.png";
+// import deliveryBoat from "../assets/Images/boat-delivery.png";
+// import image from "../assets/Images/image.png";
+// import victorianBuildings from "../assets/Images/Victorian-Buildings-London.jpg";
+// import pharmacyDelivery from "../assets/Images/Pharmacy-delivery.jpg";
+// import truck from "../assets/Images/track-img.png";
+// import service from "../assets/Images/service.png";
+// import manRideCart from "../assets/Images/man-ride-cart.png";
+// import push from "../assets/Images/push-cart.png";
+// import maskedMan from "../assets/Images/masked-man.jpg";
+// import packaBoxes from "../assets/Images/packgeBoxes.png";
+// import offload from "../assets/Images/Offload-Goods.mp4";
+
+// const Home: React.FC = () => {
+//   return (
+//     <div>
+//       <Navigation />
+
+//       {/* Hero Section */}
+//       <div className="relative bg-cover mb-44 md:mb-56 pt-20 bg-center h-[150vh] xl-custom:h-[110vh]">
+//         <video
+//           className="absolute top-0 left-0 w-full h-[170vh] md:h-[190vh] xl-custom:h-[110vh] object-cover"
+//           autoPlay
+//           loop
+//           muted
+//         >
+//           <source src={offload} type="video/mp4" />
+//         </video>
+//         <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+//         <div className="relative container mx-auto h-full flex flex-col lg:flex lg:flex-row items-center justify-around px-4 md:px-12">
+//           {/* Text Section */}
+//           <FadeInSection className="text-white mt-5 max-w-lg md:mx-40 lg:mx-10 mb-12 md:mb-0" fadeDelay={200}>
+//             <div className="text-xs md:text-xl xl-custom:text-xl-custom font-semibold text-yellow-500">
+//               ★★★★★
+//             </div>
+//             <p className="w-full md:w-72 text-sm md:text-base mb-3">
+//               Trusted choice for international and domestic courier needs.
+//             </p>
+//             <h1 className="text-3xl md:text-5xl lg:text-5xl xl-custom:text-7xl font-bold mb-4 text-[#7a1212]">
+//               Swift Delivery: Reliable Courier Services
+//             </h1>
+
+//             <div className="mt-6 md:mt-12">
+//               <p className="text-sm md:text-base w-full md:w-4/5 mb-6 md:mb-10">
+//                 Top-tier courier service excelling in same-day and next-day
+//                 delivery with a diverse fleet of skilled riders.
+//               </p>
+
+//               <button
+//                 type="submit"
+//                 className="w-44 xl-custom:w-65 md:w-52 text-lg md:text-xl bg-[#7a1212] text-white py-1 xl-custom:py-4 rounded-full hover:bg-orange-red transition-colors duration-300"
+//               >
+//                 Get
+//               </button>
+//             </div>
+//           </FadeInSection>
+
+//           {/* Form Section */}
+//           <FadeInSection className="bg-slate-400 bg-opacity-20 p-8 rounded-lg shadow-lg w-full md:mt-10 md:w-96 xl-custom:w-[30rem] max-w-7xl" fadeDelay={400}>
+//             <h2 className="text-white text-xl md:text-xl-custom mb-4">
+//               Swift Delivery Form Section
+//             </h2>
+//             <form>
+//               {/* Form fields here */}
+//             </form>
+//           </FadeInSection>
+//         </div>
+//       </div>
+
+//       {/* Swift Delivery Your Trusted Service */}
+//       <FadeInSection className="bg-white mt-32 px-5 md:py-20 md:px-8" fadeDelay={600}>
+//         <div className="max-w-7xl mx-auto text-center">
+//           <div className="text-start lg:flex flex-row lg:justify-center md:text-center gap-10">
+//             <h1 className="text-3xl md:text-5xl font-bold text-[#7a1212]">
+//               Swift Delivery: Your Trusted Courier Service
+//             </h1>
+//             <div>
+//               <p className="mt-4 md:mt-6 text-lg md:text-xl text-gray-600 max-w-xl-custom mx-auto">
+//                 Providing top-tier courier services for same-day and next-day
+//                 delivery. Our diverse fleet ensures reliability for all your
+//                 delivery needs, both domestic and international.
+//               </p>
+//               <div className="mt-8 md:mt-12 flex justify-center space-x-8">
+//                 <div className="text-center">
+//                   <p className="text-3xl md:text-4xl font-bold text-[#7a1212]">
+//                     150+
+//                   </p>
+//                   <p className="mt-2 text-lg text-gray-600">
+//                     Efficient Solutions
+//                   </p>
+//                 </div>
+//                 <div className="text-center">
+//                   <p className="text-3xl md:text-4xl font-bold text-[#7a1212]">
+//                     15
+//                   </p>
+//                   <p className="mt-2 text-lg text-gray-600">
+//                     Reliable and Secure
+//                   </p>
+//                 </div>
+//               </div>
+//             </div>
+//           </div>
+//           <div className="mt-16 mb-5">
+//             <img
+//               className="rounded-xl-custom md:h-full mx-auto"
+//               src={image}
+//               alt="image"
+//             />
+//           </div>
+//         </div>
+//       </FadeInSection>
+
+//       {/* Swift Delivery Service Section */}
+//       <FadeInSection className="bg-[#e8f0fe] py-12 md:py-20 px-4 md:px-8" fadeDelay={800}>
+//         <div className="max-w-7xl md:mx-44 lg:mx-14 xl-custom:mx-56 mx-auto text-center">
+//           <h2 className="text-3xl md:text-4xl font-bold text-[#7a1212]">
+//             Swift Delivery Services
+//           </h2>
+//           <p className="mt-4 md:mt-6 text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
+//             Top-tier courier service excels in same-day and next-day delivery.
+//             Diverse fleet ensures reliability.
+//           </p>
+//           <div className="mt-8 md:mt-12 flex flex-col lg:flex-row gap-y-10 gap-8">
+//             {/* Card 1 */}
+//             <div className="overflow-hidden">
+//               <img
+//                 src={deliveryMan}
+//                 alt="deliveryMan"
+//                 className="w-full h-80 rounded-lg object-cover"
+//               />
+//               <div className="p-4">
+//                 <h3 className="text-xl text-start font-semibold text-gray-900">
+//                   E-commerce Delivery Services
+//                 </h3>
+//                 <p className="mt-2 text-start text-gray-600">
+//                   Specializing in efficient and reliable e-commerce delivery
+//                   solutions for domestic and international needs.
+//                 </p>
+//               </div>
+//             </div>
+//             {/* Card 2 */}
+//             <div className="rounded-lg overflow-hidden">
+//               <img
+//                 src={deliveryBoat}
+//                 alt="deliveryBoat"
+//                 className="w-full h-80 rounded-lg object-cover"
+//               />
+//               <div className="p-4">
+//                 <h3 className="text-xl text-start font-semibold text-gray-900">
+//                   International Courier Services
+//                 </h3>
+//                 <p className="mt-2 text-start text-gray-600">
+//                   Reliable courier services for international deliveries,
+//                   ensuring your packages arrive on time, every time.
+//                 </p>
+//               </div>
+//             </div>
+//             {/* Card 3 */}
+//             <div className="rounded-lg overflow-hidden">
+//               <img
+//                 src={deliveryPackage}
+//                 alt="deliveryPackage"
+//                 className="w-full h-80 rounded-lg object-cover"
+//               />
+//               <div className="p-4">
+//                 <h3 className="text-xl text-start font-semibold text-gray-900">
+//                   Package Tracking Solutions
+//                 </h3>
+//                 <p className="mt-2 text-start text-gray-600">
+//                   Real-time package tracking solutions for peace of mind during
+//                   your deliveries.
+//                 </p>
+//               </div>
+//             </div>
+//           </div>
+//         </div>
+//       </FadeInSection>
+
+//       {/* Footer */}
+//       <Footer />
+//     </div>
+//   );
+// };
+
+// export default Home;
