@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import logo from "../assets/Images/swift-logo.jpg";
+import '../Global.css'; // Import custom CSS file
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -66,12 +67,16 @@ const Navigation = () => {
           </svg>
         </button>
       </div>
-      <div className={`md:hidden ${isOpen ? "block" : "hidden"} bg-white shadow-md mt-2 border-t border-gray-200`}>
-        <ul className="space-y-4 px-4 py-2 text-lg text-gray-900">
+      <div
+        className={`md:hidden bg-white shadow-md mt-2 border-t border-gray-200 transition-all duration-300 ease-in-out overflow-hidden ${
+          isOpen ? "max-h-[500px] py-4" : "max-h-0 py-0"
+        }`}
+      >
+        <ul className={`space-y-4 px-4 text-xl text-[#7a1212] flex flex-col items-center transition-transform duration-300 ease-in-out ${isOpen ? 'animate-slide-in' : 'animate-slide-out'}`}>
           <li>
             <Link
               to="/"
-              className={`block text-[#7a1212] hover:text-[#7a1212] transition-colors duration-300 ${
+              className={`block hover:text-[#7a1212] transition-colors duration-300 ${
                 location.pathname === "/" || location.pathname === "/home" ? "underline font-bold" : ""
               }`}
             >
@@ -81,7 +86,7 @@ const Navigation = () => {
           <li>
             <Link
               to="/service"
-              className={`block text-[#7a1212] hover:text-[#7a1212] transition-colors duration-300 ${
+              className={`block hover:text-[#7a1212] transition-colors duration-300 ${
                 location.pathname === "/service" ? "underline font-bold" : ""
               }`}
             >
@@ -91,7 +96,7 @@ const Navigation = () => {
           <li>
             <Link
               to="/about"
-              className={`block text-[#7a1212] hover:text-[#7a1212] transition-colors duration-300 ${
+              className={`block hover:text-[#7a1212] transition-colors duration-300 ${
                 location.pathname === "/about" ? "underline font-bold" : ""
               }`}
             >
@@ -101,7 +106,7 @@ const Navigation = () => {
           <li>
             <Link
               to="/contact"
-              className={`block text-[#7a1212]  hover:text-[#7a1212] transition-colors duration-300 ${
+              className={`block hover:text-[#7a1212] transition-colors duration-300 ${
                 location.pathname === "/contact" ? "underline font-bold" : ""
               }`}
             >

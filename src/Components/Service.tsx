@@ -15,17 +15,17 @@ const Service: React.FC = () => {
       <Navigation />
 
       {/* Hero Section */}
-      <div className="testimonials-bg-img">
+      <FadeInSection className="testimonials-bg-img" fadeDelay={200}>
         <div className="text-center mt-40 mb-16 px-4 md:px-0 text-black">
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#7a1212]">Reliable Courier Service</h1>
           <p className="w-full md:w-[30rem] mt-4 sm:mt-6 lg:mt-8 mx-auto text-sm md:text-base text-white">
             Swift Delivery offers top-tier courier service with diverse fleet for secure international and domestic deliveries.
           </p>
         </div>
-      </div>
+      </FadeInSection>
 
       {/* Services Section */}
-      <FadeInSection>
+      <FadeInSection fadeDelay={400}>
         <div className="bg-gray-100 py-12 md:py-20 px-4 md:px-0">
           <div className="text-center mb-12 md:mb-16">
             <h1 className="text-3xl sm:text-4xl lg:text-5xl mb-4 sm:mb-5 font-bold text-[#7a1212]">Swift Delivery Services</h1>
@@ -65,7 +65,6 @@ const Service: React.FC = () => {
       </FadeInSection>
 
       {/* Additional Services Section */}
-      <FadeInSection>
         <div className="px-4 md:px-0 mb-12 md:mb-20">
           <div className="text-center my-12 md:my-16">
             <h1 className="text-3xl text-[#7a1212] sm:text-4xl lg:text-5xl mb-4 sm:mb-5 font-bold text-text-[#7a1212]">Additional Services</h1>
@@ -76,7 +75,7 @@ const Service: React.FC = () => {
 
           <div className="flex flex-col gap-8 md:gap-10">
             <div className="flex flex-col lg:flex-row gap-6 lg:gap-10 mx-auto">
-              <div className="flex flex-col gap-4">
+              <FadeInSection className="flex flex-col gap-4" fadeDelay={600}>
                 <img src={food} alt="Food delivery" className="rounded-3xl xl:w-[35rem] md:w-96 lg:w-96" />
                 <div className="bg-white p-4 rounded-lg shadow-md">
                   <div className="flex justify-between items-center">
@@ -87,9 +86,9 @@ const Service: React.FC = () => {
                     Specializing in efficient and reliable food delivery solutions for customers.
                   </p>
                 </div>
-              </div>
+              </FadeInSection>
 
-              <div className="flex flex-col gap-4">
+              <FadeInSection className="flex flex-col gap-4" fadeDelay={800}>
                 <img src={uberEats} alt="Uber Eats" className="rounded-3xl xl:w-[35rem] md:w-96 lg:w-96" />
                 <div className="bg-white p-4 rounded-lg shadow-md">
                   <div className="flex justify-between items-center">
@@ -100,11 +99,11 @@ const Service: React.FC = () => {
                     Providing secure and timely grocery delivery options for convenience.
                   </p>
                 </div>
-              </div>
+              </FadeInSection>
             </div>
 
             <div className="flex flex-col lg:flex-row gap-6 lg:gap-10 mx-auto">
-              <div className="flex flex-col gap-4">
+              <FadeInSection className="flex flex-col gap-4" fadeDelay={1000}>
                 <img src={delivered} alt="delivered" className="rounded-3xl xl:w-[35rem] md:w-96 lg:w-96" />
                 <div className="bg-white p-4 rounded-lg shadow-md">
                   <div className="flex justify-between items-center">
@@ -115,9 +114,9 @@ const Service: React.FC = () => {
                     Delivering online orders promptly and securely for customer satisfaction.
                   </p>
                 </div>
-              </div>
+              </FadeInSection>
 
-              <div className="flex flex-col gap-4">
+              <FadeInSection className="flex flex-col gap-4"  fadeDelay={1200}>
                 <img src={manSmile} alt="man-smile" className="rounded-3xl xl:w-[35rem] md:w-96 lg:w-96" />
                 <div className="bg-white p-4 rounded-lg shadow-md">
                   <div className="flex justify-between items-center">
@@ -128,11 +127,10 @@ const Service: React.FC = () => {
                     Offering flexible and convenient on-demand delivery solutions for various needs.
                   </p>
                 </div>
-              </div>
+              </FadeInSection>
             </div>
           </div>
         </div>
-      </FadeInSection>
 
       {/* Footer */}
       <Footer />
