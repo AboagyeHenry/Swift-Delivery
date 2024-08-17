@@ -77,7 +77,7 @@ const Navigation = () => {
             <Link
               to="/"
               className={`block hover:text-[#7a1212] transition-colors duration-300 ${
-                location.pathname === "/" || location.pathname === "/home" ? "underline font-bold" : ""
+                location.pathname === "/" || location.pathname === "/home" ? "font-bold" : ""
               }`}
             >
               Home
@@ -87,7 +87,7 @@ const Navigation = () => {
             <Link
               to="/service"
               className={`block hover:text-[#7a1212] transition-colors duration-300 ${
-                location.pathname === "/service" ? "underline font-bold" : ""
+                location.pathname === "/service" ? " font-bold" : ""
               }`}
             >
               Service
@@ -97,7 +97,7 @@ const Navigation = () => {
             <Link
               to="/about"
               className={`block hover:text-[#7a1212] transition-colors duration-300 ${
-                location.pathname === "/about" ? "underline font-bold" : ""
+                location.pathname === "/about" ? " font-bold" : ""
               }`}
             >
               About
@@ -107,7 +107,7 @@ const Navigation = () => {
             <Link
               to="/contact"
               className={`block hover:text-[#7a1212] transition-colors duration-300 ${
-                location.pathname === "/contact" ? "underline font-bold" : ""
+                location.pathname === "/contact" ? " font-bold" : ""
               }`}
             >
               Contact
