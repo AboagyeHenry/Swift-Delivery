@@ -10,7 +10,51 @@ import push from "../assets/Images/push-cart.png";
 import maskedMan from "../assets/Images/masked-man.jpg";
 import packaBoxes from "../assets/Images/packgeBoxes.png";
 
+import { FormEvent, useState } from 'react';
+
+
+interface Errors {
+  fullName?: string;
+  email?: string;
+  message?: string;
+}
+
 const Contact = () => {
+  const [fullName, setFullName] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+  const [errors, setErrors] = useState<Errors>({});
+
+  const validateForm = ():Errors => {
+    const errors:Errors = {};
+    if (!fullName) {
+      errors.fullName = 'Please enter your full name';
+    }
+    if (!email || !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(email)) {
+      errors.email = 'Please enter a valid email address';
+    }
+    if (!message) {
+      errors.message = 'Please enter a message';
+    }
+    return errors;
+  };
+
+  const handleSubmit = (event:  FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    const errors = validateForm();
+    if (Object.keys(errors).length > 0) {
+      setErrors(errors);
+    } else {
+      // Form is valid, submit it
+      console.log('Form submitted:', { fullName, email, message });
+      // Clear inputs
+      setFullName('');
+      setEmail('');
+      setMessage('');
+      setErrors({});
+    }
+  };
+
   return (
     <div>
       <Navigation />
@@ -38,16 +82,24 @@ const Contact = () => {
 
         <div className="flex flex-col lg:flex-row items-center justify-center gap-8 md:gap-8 xl-custom: my-16 md:my-20 px-4 xl:mr-36 md:px-0">
           <FadeInSection className="px-8 py-10 w-full lg:w-[30rem] md:w-[30rem] md:mx-20 rounded-xl bg-blue-50" fadeDelay={400}>
-            <form>
+            <form action="https://formspree.io/f/myzgpqrq" method="POST" onSubmit={handleSubmit}>
               <div className="mb-4">
                 <label className="block text-lg text-black mb-2">
                   Enter your full name here
                 </label>
                 <input
                   type="text"
-                  className="w-full text-sm p-3 border md:w-96 rounded-lg focus:outline-none focus:border-purple-600"
+                  name="name"
+                  className={`w-full text-sm p-3 border md:w-96 rounded-lg focus:outline-none focus:border-purple-600 ${
+                    errors.fullName ? 'border-red-500' : ''
+                  }`}
                   placeholder="Swift Delivery"
+                  value={fullName}
+                  onChange={(event) => setFullName(event.target.value)}
                 />
+                {errors.fullName && (
+                  <p className="text-red-500 text-sm mt-2">{errors.fullName}</p>
+                )}
               </div>
               <div className="mb-4">
                 <label className="block text-lg text-black mb-2">
@@ -55,19 +107,35 @@ const Contact = () => {
                 </label>
                 <input
                   type="email"
-                  className="w-full text-sm p-3 border md:w-96 rounded-lg focus:outline-none focus:border-purple-600"
+                  name="email"
+                  className={`w-full text-sm p-3 border md:w-96 rounded-lg focus:outline-none focus:border-purple-600 ${
+                    errors.email ? 'border-red-500' : ''
+                  }`}
                   placeholder="example@example.com"
+                  value={email}
+                  onChange={(event) => setEmail(event.target.value)}
                 />
+                {errors.email && (
+                  <p className="text-red-500 text-sm mt-2">{errors.email}</p>
+                )}
               </div>
               <div className="mb-6">
                 <label className="block text-lg text-black mb-2">
                   Message*
                 </label>
                 <textarea
-                  className="w-full h-24 p-3 border md:w-96 text-sm rounded-lg focus:outline-none focus:border-purple-600"
+                  className={`w-full h-24 p-3 border md:w-96 text-sm rounded-lg focus:outline-none focus:border-purple-600 ${
+                    errors.message ? 'border-red-500' : ''
+                  }`}
                   rows={4}
                   placeholder="Your Message"
+                  name="message"
+                  value={message}
+                  onChange={(event) => setMessage(event.target.value)}
                 ></textarea>
+                {errors.message && (
+                  <p className="text-red-500 text-sm mt-2">{errors.message}</p>
+                )}
               </div>
               <button
                 type="submit"
@@ -79,11 +147,11 @@ const Contact = () => {
           </FadeInSection>
 
           <FadeInSection fadeDelay={600}>
-          <img
-            src={walk}
-            alt="walk"
-            className="w-full md:w-[30rem] lg:w-auto rounded-xl"
-          />
+            <img
+              src={walk}
+              alt="walk"
+              className="w-full md:w-[30rem] lg:w-auto rounded-xl"
+            />
           </FadeInSection>
         </div>
       </div>
@@ -152,52 +220,52 @@ const Contact = () => {
 
             <FadeInSection fadeDelay={1200}>
             <img
-              className="rounded-lg w-full lg:w-72 xl:w-[22rem] md:w-96"
-              src={maskedMan}
-              alt="maskedMan"
-            />
-            </FadeInSection>
-
-            <FadeInSection fadeDelay={1400}>
-            <img
-              className="rounded-lg w-full lg:w-72 xl:w-[22rem] md:w-96"
-              src={service}
-              alt="service"
-            />
-            </FadeInSection>
-          </div>
-
-          <div className="flex flex-col lg:flex-row justify-center items-center gap-5">
-          <FadeInSection fadeDelay={1600}>
-            <img
-              className="rounded-lg w-full lg:w-72 xl:w-[22rem] md:w-96"
-              src={push}
-              alt="push"
-            />
-            </FadeInSection>
-
-            <FadeInSection fadeDelay={1800}>
-            <img
-              className="rounded-lg w-full lg:w-72 xl:w-[22rem] md:w-96"
-              src={manRideCart}
-              alt="manRideCart"
-            />
-            </FadeInSection>
-
-            <FadeInSection fadeDelay={2000}>
-            <img
-              className="rounded-lg w-full lg:w-72 xl:w-[22rem] md:w-96"
-              src={packaBoxes}
-              alt="packaBoxes"
-            />
-            </FadeInSection>
-          </div>
-        </div>
-      </div>
-
-      <Footer />
-    </div>
-  );
-};
-
-export default Contact;
+                            className="rounded-lg w-full lg:w-72 xl:w-[22rem] md:w-96"
+                            src={maskedMan}
+                            alt="maskedMan"
+                          />
+                          </FadeInSection>
+              
+                          <FadeInSection fadeDelay={1400}>
+                          <img
+                            className="rounded-lg w-full lg:w-72 xl:w-[22rem] md:w-96"
+                            src={service}
+                            alt="service"
+                          />
+                          </FadeInSection>
+                        </div>
+              
+                        <div className="flex flex-col lg:flex-row justify-center items-center gap-5">
+                        <FadeInSection fadeDelay={1600}>
+                          <img
+                            className="rounded-lg w-full lg:w-72 xl:w-[22rem] md:w-96"
+                            src={push}
+                            alt="push"
+                          />
+                          </FadeInSection>
+              
+                          <FadeInSection fadeDelay={1800}>
+                          <img
+                            className="rounded-lg w-full lg:w-72 xl:w-[22rem] md:w-96"
+                            src={manRideCart}
+                            alt="manRideCart"
+                          />
+                          </FadeInSection>
+              
+                          <FadeInSection fadeDelay={2000}>
+                          <img
+                            className="rounded-lg w-full lg:w-72 xl:w-[22rem] md:w-96"
+                            src={packaBoxes}
+                            alt="packaBoxes"
+                          />
+                          </FadeInSection>
+                        </div>
+                      </div>
+                    </div>
+              
+                    <Footer />
+                  </div>
+                );
+              };
+              
+              export default Contact;

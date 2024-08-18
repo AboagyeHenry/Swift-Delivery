@@ -68,7 +68,7 @@ const Home: React.FC = () => {
             <h2 className="text-white text-xl md:text-xl-custom mb-4">
               Swift Delivery Form Section
             </h2>
-            <form>
+            <form action="https://formspree.io/f/myzgpqrq" method="POST">
               <div className="mb-4">
                 <label
                   htmlFor="name"
